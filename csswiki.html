@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+</head>
+<body>
+
+<table class="infobox"><caption class="infobox-title" style="font-size:130%; padding-bottom:0.15em;"><b><i>Cascading Style Sheets (CSS)</i></b></caption><tbody><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Filename extension</th><td class="infobox-data" style="line-height:1.35em;"><style data-mw-deduplicate="TemplateStyles:r886049734">.mw-parser-output .monospaced{font-family:monospace,monospace}</style><div class="monospaced">
+.css</div></td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Internet media type</th><td class="infobox-data" style="line-height:1.35em;"><link rel="mw-deduplicated-inline-style" <div class="monospaced">
+text/css</div></td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Uniform Type Identifier(UTI)</th><td class="infobox-data" style="line-height:1.35em;">public.css</td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Developed by</th><td class="infobox-data" style="line-height:1.35em;">World Wide Web Consortium (W3C)</td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Initial release</th><td class="infobox-data" style="line-height:1.35em;">December 17, 1996<span class="noprint">; 24 years ago</span><span style="display:none">;(<span class="bday dtstart published updated">1996-12-17</span>)</span></td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Latest release</th><td class="infobox-data" style="line-height:1.35em;"><div style="display:inline-block; padding:0.1em 0;line-height:1.2em;">CSS 2.1&nbsp;: Level 2 Revision 1<br>(April&nbsp;12, 2016<span class="noprint">; 5 years ago</span><span style="display:none">;(<span class="bday dtstart published updated">2016-04-12</span>)</span>) </div></td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Type of format</th><td class="infobox-data" style="line-height:1.35em;">Style sheet language</td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Container for</th><td class="infobox-data" style="line-height:1.35em;">Style rules for HTML elements (tags)</td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Contained by</th><td class="infobox-data" style="line-height:1.35em;">HTML Documents</td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;"><span class="nowrap">Open format?</span></th><td class="infobox-data" style="line-height:1.35em;">Yes</td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Website</th><td class="infobox-data" style="line-height:1.35em;"><span class="url">www<wbr>.w3<wbr>.org<wbr>/TR<wbr>/CSS<wbr>/<wbr>#css</span></td></tr></tbody></table>
+
+
+<p><b>Cascading Style Sheets</b> (<b>CSS</b>) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML, CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+</p><p>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
+</p><p>Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device.
+</p><p>The name <i>cascading</i> comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element. This cascading priority scheme is predictable.
+</p><p>The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) <code>text/css</code> is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.
+</p><p>In addition to HTML, other markup languages support the use of CSS including XHTML, XML, SVG, and XUL.
+</p></br>
+
+
+<h2><span class="mw-headline" id="Syntax">Syntax</span></h2>
+<p>CSS has a simple syntax and uses a number of English keywords to specify the names of various style properties.
+</p><p>A style sheet consists of a list of <i>rules</i>. Each rule or rule-set consists of one or more <i>selectors</i>, and a <i>declaration block</i>.
+</p>
+<h3><span class="mw-headline" id="Selector">Selector</span></h3>
+<p>In CSS, <i>selectors</i> declare which part of the markup a style applies to by matching tags and attributes in the markup itself.
+</p><p>Selectors may apply to the following:
+</p>
+<ul><li>all elements of a specific type, e.g. the second-level headers h2</li>
+<li>elements specified by attribute, in particular:
+<ul><li><i>id</i>: an identifier unique within the document, identified with a hash prefix e.g. <code class="mw-highlight mw-highlight-lang-text mw-content-ltr" id="" style="" dir="ltr">#id</code></li>
+<li><i>class</i>: an identifier that can annotate multiple elements in a document, identified with a period prefix e.g. <code class="mw-highlight mw-highlight-lang-text mw-content-ltr" id="" style="" dir="ltr">.classname</code></li></ul></li>
+<li>elements depending on how they are placed relative to others in the document tree.</li></ul>
+<p>Classes and IDs are case-sensitive, start with letters, and can include alphanumeric characters, hyphens, and underscores. A class may apply to any number of instances of any elements. An ID may only be applied to a single element.
+</p><p><i>Pseudo-classes</i> are used in CSS selectors to permit formatting based on information that is not contained in the document tree. One example of a widely used pseudo-class is <code class="mw-highlight mw-highlight-lang-css mw-content-ltr" id="" style="" dir="ltr"><span class="p">:</span><span class="nd">hover</span></code>, which identifies content only when the user "points to" the visible element, usually by holding the mouse cursor over it. It is appended to a selector as in <code class="mw-highlight mw-highlight-lang-css mw-content-ltr" id="" style="" dir="ltr"><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span></code> or <code class="mw-highlight mw-highlight-lang-css mw-content-ltr" id="" style="" dir="ltr"><span class="p">#</span><span class="nn">elementid</span><span class="p">:</span><span class="nd">hover</span></code>. A pseudo-class classifies document elements, such as <code class="mw-highlight mw-highlight-lang-css mw-content-ltr" id="" style="" dir="ltr"><span class="p">:</span><span class="nd">link</span></code> or <code class="mw-highlight mw-highlight-lang-css mw-content-ltr" id="" style="" dir="ltr"><span class="p">:</span><span class="nd">visited</span></code>, whereas a <i>pseudo-element</i> makes a selection that may consist of partial elements, such as <code class="mw-highlight mw-highlight-lang-css mw-content-ltr" id="" style="" dir="ltr"><span class="p">::</span><span class="nd">first-line</span></code> or <code class="mw-highlight mw-highlight-lang-css mw-content-ltr" id="" style="" dir="ltr"><span class="p">::</span><span class="nd">first-letter</span></code>.
+</p><p>Selectors may be combined in many ways to achieve great specificity and flexibility. Multiple selectors may be joined in a spaced list to specify elements by location, element type, id, class, or any combination thereof. The order of the selectors is important. For example, <code class="nowrap mw-highlight mw-highlight-lang-css mw-content-ltr" dir="ltr"><span class="nt">div</span> <span class="p">.</span><span class="nc">myClass</span> <span class="p">{</span><span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;}</span></code> applies to all elements of class myClass that are inside div elements, whereas <code class="nowrap mw-highlight mw-highlight-lang-css mw-content-ltr" dir="ltr"><span class="p">.</span><span class="nc">myClass</span> <span class="nt">div</span> <span class="p">{</span><span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;}</span></code> applies to all div elements that are inside elements of class myClass. This is not to be confused with concatenated identifiers such as <code class="nowrap mw-highlight mw-highlight-lang-css mw-content-ltr" dir="ltr"><span class="nt">div</span><span class="p">.</span><span class="nc">myClass</span> <span class="p">{</span><span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;}</span></code> which applies to div elements of class myClass.
+</p>
+
+<h3><span class="mw-headline" id="Declaration_block">Declaration block</span></h3>
+<p>A declaration block consists of a list of <i>declarations</i> in braces. Each declaration itself consists of a <i>property</i>, a colon (<code>:</code>), and a <i>value</i>. If there are multiple declarations in a block, a semi-colon (<code>;</code>) must be inserted to separate each declaration. An <i>optional</i> semi-colon after the last (or single) declaration may be used.
+</p><p>Properties are specified in the CSS standard. Each property has a set of possible values. Some properties can affect any type of element, and others apply only to particular groups of elements.
+</p><p>Values may be keywords, such as "center" or "inherit", or numerical values, such as <code class="mw-highlight mw-highlight-lang-text mw-content-ltr" id="" style="" dir="ltr">200px</code> (200 pixels), <code class="mw-highlight mw-highlight-lang-text mw-content-ltr" id="" style="" dir="ltr">50vw</code> (50 percent of the viewport width) or 80% (80 percent of the parent element's width). Color values can be specified with keywords (e.g.red), hexadecimal values (e.g.#FF0000, also abbreviated as #F00), RGB values on a 0 to 255 scale (e.g. <code><code class="mw-highlight mw-highlight-lang-text mw-content-ltr" id="" style="" dir="ltr">rgb(255, 0, 0)</code></code>), RGBA values that specify both color and alpha transparency (e.g. <code class="mw-highlight mw-highlight-lang-text mw-content-ltr" id="" style="" dir="ltr">rgba(255, 0, 0, 0.8)</code>), or HSL or HSLA values (e.g. <code class="mw-highlight mw-highlight-lang-text mw-content-ltr" id="" style="" dir="ltr">hsl(000, 100%, 50%)</code>, <code class="mw-highlight mw-highlight-lang-text mw-content-ltr" id="" style="" dir="ltr">hsla(000, 100%, 50%, 80%)</code>).
+</p>
+<h4><span class="mw-headline" id="Length_units">Length units</span></h4>
+<p>Non-zero numeric values representing linear measures must include a length unit, which is either an alphabetic code or abbreviation, as in <code>200px</code> or <code>50vw</code>; or a percentage sign, as in <code>80%</code>. Some units – <code>cm</code> (centimetre); <code>in</code> (inch); <code>mm</code> (millimetre); <code>pc</code> (pica); and <code>pt</code> (point) – are <i>absolute</i>, which means that the rendered dimension does not depend upon the structure of the page; others – <code>em</code> (em); <code>ex</code> (ex) and <code>px</code> (pixel) – are <i>relative</i>, which means that factors such as the font size of a parent element can affect the rendered measurement. These eight units were a feature of CSS 1 and retained in all subsequent revisions. The proposed CSS Values and Units Module Level 3 will, if adopted as a W3C Recommendation, provide seven further length units: <code>ch</code>; <code>Q</code>; <code>rem</code>; <code>vh</code>; <code>vmax</code>; <code>vmin</code>; and <code>vw</code>.
+</p>
+<h3><span class="mw-headline" id="Use">Use</span></h3>
+<p>Before CSS, nearly all presentational attributes of HTML documents were contained within the HTML markup. All font colors, background styles, element alignments, borders and sizes had to be explicitly described, often repeatedly, within the HTML. CSS lets authors move much of that information to another file, the style sheet, resulting in considerably simpler HTML.
+</p><p>For example, headings (<code>h1</code> elements), sub-headings (<code>h2</code>), sub-sub-headings (<code>h3</code>), etc., are defined structurally using HTML. In print and on the screen, choice of font, size, color and emphasis for these elements is <i>presentational</i>.
+</p><p>Before CSS, document authors who wanted to assign such typographic characteristics to, say, all <code>h2</code> headings had to repeat HTML presentational markup for each occurrence of that heading type. This made documents more complex, larger, and more error-prone and difficult to maintain. CSS allows the separation of presentation from structure. CSS can define color, font, text alignment, size, borders, spacing, layout and many other typographic characteristics, and can do so independently for on-screen and printed views. CSS also defines non-visual styles, such as reading speed and emphasis for aural text readers. The W3C has now deprecated the use of all presentational HTML markup.
+</p><p>For example, under pre-CSS HTML, a heading element defined with red text would be written as:
+</p>
+<div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">font</span> <span class="na">color</span><span class="o">=</span><span class="s">"red"</span><span class="p">&gt;</span>Chapter 1.<span class="p">&lt;/</span><span class="nt">font</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</pre></div>
+<p>Using CSS, the same element can be coded using style properties instead of HTML presentational attributes:
+</p>
+<div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">style</span><span class="o">=</span><span class="s">"color: red;"</span><span class="p">&gt;</span>Chapter 1.<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</pre></div>
+<p>The advantages of this may not be immediately clear but the power of CSS becomes more apparent when the style properties are placed in an internal style element or, even better, an external CSS file. For example, suppose the document contains the style element:
+</p>
+<div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="nt">h1</span> <span class="p">{</span>
+        <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</pre></div>
+<p>All <code>h1</code> elements in the document will then automatically become red without requiring any explicit code. If the author later wanted to make <code>h1</code> elements blue instead, this could be done by changing the style element to:
+</p>
+<div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="nt">h1</span> <span class="p">{</span>
+        <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</pre></div>
+<p>rather than by laboriously going through the document and changing the color for each individual <code>h1</code> element.
+</p><p>The styles can also be placed in an external CSS file, as described below, and loaded using syntax similar to:
+</p>
+<div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"path/to/file.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span>
+</pre></div>
+<p>This further decouples the styling from the HTML document and makes it possible to restyle multiple documents by simply editing a shared external CSS file.
+</p>
+<h3><span class="mw-headline" id="Sources">Sources</span></h3>
+<p>CSS information can be provided from various sources. These sources can be the web browser, the user and the author. The information from the author can be further classified into inline, media type, importance, selector specificity, rule order, inheritance and property definition. CSS style information can be in a separate document or it can be embedded into an HTML document. Multiple style sheets can be imported. Different styles can be applied depending on the output device being used; for example, the screen version can be quite different from the printed version, so that authors can tailor the presentation appropriately for each medium.
+</p><p>The style sheet with the highest priority controls the content display. Declarations not set in the highest priority source are passed on to a source of lower priority, such as the user agent style. The process is called <i>cascading</i>.
+</p><p>One of the goals of CSS is to allow users greater control over presentation. Someone who finds red italic headings difficult to read may apply a different style sheet. Depending on the browser and the web site, a user may choose from various style sheets provided by the designers, or may remove all added styles and view the site using the browser's default styling, or may override just the red italic heading style without altering other attributes.
+</p>
+<table class="wikitable">
+<caption>CSS priority scheme (highest to lowest)
+</caption>
+<tbody><tr>
+<th>Priority</th>
+<th>CSS source type</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Importance</td>
+<td>The "<code class="mw-highlight mw-highlight-lang-css mw-content-ltr" id="" style="" dir="ltr"><span class="o">!</span><span class="nt">important</span></code>" annotation overwrites the previous priority types
+</td></tr>
+<tr>
+<td>2</td>
+<td>Inline</td>
+<td>A style applied to an HTML element via HTML "style" attribute
+</td></tr>
+<tr>
+<td>3</td>
+<td>Media Type</td>
+<td>A property definition applies to all media types, unless a media specific CSS is defined
+</td></tr>
+<tr>
+<td>4</td>
+<td>User defined</td>
+<td>Most browsers have the accessibility feature: a user defined CSS
+</td></tr>
+<tr>
+<td>5</td>
+<td>Selector specificity</td>
+<td>A specific contextual selector (<code class="mw-highlight mw-highlight-lang-css mw-content-ltr" id="" style="" dir="ltr"><span class="p">#</span><span class="nn">heading</span> <span class="nt">p</span></code>) overwrites generic definition
+</td></tr>
+<tr>
+<td>6</td>
+<td>Rule order</td>
+<td>Last rule declaration has a higher priority
+</td></tr>
+<tr>
+<td>7</td>
+<td>Parent inheritance</td>
+<td>If a property is not specified, it is inherited from a parent element
+</td></tr>
+<tr>
+<td>8</td>
+<td>CSS property definition in HTML document</td>
+<td>CSS rule or CSS inline style overwrites a default browser value
+</td></tr>
+<tr>
+<td>9</td>
+<td>Browser default</td>
+<td>The lowest priority: browser default value is determined by W3C initial value specifications
+</td></tr></tbody></table>
+
+
+<h2><span class="mw-headline" id="History">History</span></h2>
+Håkon Wium Lie, chief technical officer of the Opera Software company and co-creator of the CSS web standards
+<p>CSS was first proposed by Håkon Wium Lie on October 10, 1994. At the time, Lie was working with Tim Berners-Lee at CERN. Several other style sheet languages for the web were proposed around the same time, and discussions on public mailing lists and inside World Wide Web Consortium resulted in the first W3C CSS Recommendation (CSS1) being released in 1996. In particular, a proposal by Bert Bos was influential; he became co-author of CSS1, and is regarded as co-creator of CSS.
+</p><p>Style sheets have existed in one form or another since the beginnings of Standard Generalized Markup Language (SGML) in the 1980s, and CSS was developed to provide style sheets for the web. One requirement for a web style sheet language was for style sheets to come from different sources on the web. Therefore, existing style sheet languages like DSSSL and FOSI were not suitable. CSS, on the other hand, let a document's style be influenced by multiple style sheets by way of "cascading" styles.
+</p><p>As HTML grew, it came to encompass a wider variety of stylistic capabilities to meet the demands of web developers<. This evolution gave the designer more control over site appearance, at the cost of more complex HTML. Variations in web browser implementations, such as ViolaWWW and WorldWideWeb, made consistent site appearance difficult, and users had less control over how web content was displayed. The browser/editor developed by Tim Berners-Lee had style sheets that were hard-coded into the program. The style sheets could therefore not be linked to documents on the web.Robert Cailliau, also of CERN, wanted to separate the structure from the presentation so that different style sheets could describe different presentation for printing, screen-based presentations, and editors.
+</p><p>Improving web presentation capabilities was a topic of interest to many in the web community and nine different style sheet languages were proposed on the www-style mailing list. Of these nine proposals, two were especially influential on what became CSS: Cascading HTML Style Sheets and Stream-based Style Sheet Proposal (SSP). Two browsers served as testbeds for the initial proposals; Lie worked with Yves Lafon to implement CSS in Dave Raggett's Arena browser. Bert Bos implemented his own SSP proposal in the Argo browser. Thereafter, Lie and Bos worked together to develop the CSS standard (the 'H' was removed from the name because these style sheets could also be applied to other markup languages besides HTML).
+</p><p>Lie's proposal was presented at the "Mosaic and the Web" conference (later called WWW2) in Chicago, Illinois in 1994, and again with Bert Bos in 1995. Around this time the W3C was already being established, and took an interest in the development of CSS. It organized a workshop toward that end chaired by Steven Pemberton. This resulted in W3C adding work on CSS to the deliverables of the HTML editorial review board (ERB). Lie and Bos were the primary technical staff on this aspect of the project, with additional members, including Thomas Reardon of Microsoft, participating as well. In August 1996, Netscape Communication Corporation presented an alternative style sheet language called JavaScript Style Sheets (JSSS). The spec was never finished, and is deprecated. By the end of 1996, CSS was ready to become official, and the CSS level 1 Recommendation was published in December.
+</p><p>Development of HTML, CSS, and the DOM had all been taking place in one group, the HTML Editorial Review Board (ERB). Early in 1997, the ERB was split into three working groups: HTML Working group, chaired by Dan Connolly of W3C; DOM Working group, chaired by Lauren Wood of SoftQuad; and CSS Working group, chaired by Chris Lilley of W3C.
+</p><p>The CSS Working Group began tackling issues that had not been addressed with CSS level 1, resulting in the creation of CSS level 2 on November 4, 1997. It was published as a W3C Recommendation on May 12, 1998. CSS level 3, which was started in 1998, is still under development as of 2014.
+</p><p>In 2005, the CSS Working Groups decided to enforce the requirements for standards more strictly. This meant that already published standards like CSS2.1, CSS3 Selectors, and CSS3 Text were pulled back from Candidate Recommendation to Working Draft level.
+</p>
+
+<h3><span class="mw-headline" id="Variations">Variations</span></h3>
+<p>CSS has various levels and profiles. Each level of CSS builds upon the last, typically adding new features and typically denoted as CSS&nbsp;1, CSS&nbsp;2, CSS&nbsp;3, and CSS&nbsp;4. Profiles are typically a subset of one or more levels of CSS built for a particular device or user interface. Currently there are profiles for mobile devices, printers, and television sets. Profiles should not be confused with media types, which were added in CSS&nbsp;2.
+</p>
+<h4><span class="mw-headline" id="CSS_1">CSS 1</span></h4>
+<p>The first  CSS specification to become an official W3C Recommendation is CSS level 1, published on December 17, 1996.  Håkon Wium Lie and Bert Bos are credited as the original developers. Among its capabilities are support for
+</p>
+<ul><li>Font properties such as typeface and emphasis</li>
+<li>Color of text, backgrounds, and other elements</li>
+<li>Text attributes such as spacing between words, letters, and lines of text</li>
+<li>Alignment</a> of text, images, tables and other elements</li>
+<li>Margin, border, padding, and positioning for most elements</li>
+<li>Unique identification and generic classification of groups of attributes</li></ul>
+<p>The W3C no longer maintains the CSS 1 Recommendation.
+</p>
+<h4><span class="mw-headline" id="CSS_2">CSS 2</span></h4>
+<p>CSS level 2 specification was developed by the W3C and published as a recommendation in May 1998. A superset of CSS1, CSS2 includes a number of new capabilities like absolute, relative, and fixed positioning of elements and z-index, the concept of media types, support for aural style sheets (which were later replaced by the CSS 3 speech modules) and bidirectional text, and new font properties such as shadows.
+</p><p>The W3C no longer maintains the CSS2 recommendation.
+</p>
+<h4>CSS 2.1</h4>
+<p>CSS level 2 revision 1, often referred to as "CSS 2.1", fixes errors in CSS2, removes poorly supported or not fully interoperable features and adds already implemented browser extensions to the specification. To comply with the W3C Process for standardizing technical specifications, CSS2.1 went back and forth between Working Draft status and Candidate Recommendation status for many years. CSS 2.1 first became a Candidate Recommendation on February 25, 2004, but it was reverted to a Working Draft on June 13, 2005 for further review. It returned to Candidate Recommendation on 19 July 2007 and then updated twice in 2009. However, because changes and clarifications were made, it again went back to Last Call Working Draft on 7 December 2010.
+</p><p>CSS 2.1 went to Proposed Recommendation on 12 April 2011.After being reviewed by the W3C Advisory Committee, it was finally published as a W3C Recommendation on 7 June 2011.
+</p><p>CSS 2.1 was planned as the first and final revision of level 2—but low priority work on CSS 2.2 began in 2015.
+</p>
+<h4><span class="mw-headline" id="CSS_3">CSS 3</span></h4>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1033289096"><div role="note" class="hatnote navigation-not-searchable">"CSS3" redirects here. For other uses, see CSS3 (disambiguation).</div>
+<p>Unlike CSS2, which is a large single specification defining various features, CSS3 is divided into several separate documents called "modules". Each module adds new capabilities or extends features defined in CSS2, preserving backward compatibility. Work on CSS level 3 started around the time of publication of the original CSS2 recommendation. The earliest CSS3 drafts were published in June 1999.
+</p><p>Due to the modularization, different modules have different stability and statuses.
+</p><p>Some modules have <i>Candidate Recommendation</i> (<i>CR</i>) status and are considered moderately stable. At <i>CR</i> stage, implementations are advised to drop vendor prefixes.
+</p>
+<div class="mbox-text-span">This article needs to be <b>updated</b>.<span class="hide-when-compact"> Please help update this article to reflect recent events or newly available information.</span><i>(<span class="date">January 2021</span>)</i></div>
+<table class="wikitable sortable jquery-tablesorter">
+<caption>Summary of main module-specifications
+</caption>
+<thead><tr>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Module
+</th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Specification title
+</th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Status
+</th>
+<th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Date
+</th></tr></thead><tbody>
+<tr>
+<td><samp>css3-background</samp>
+</td>
+<td>CSS Backgrounds and Borders Module Level 3</a>
+</td>
+<td><i>Candidate</i> Rec.</td>
+<td align="right"><span data-sort-value="000000002020-12-01-0000" style="white-space:nowrap">Dec 2020</span>
+</td></tr>
+<tr>
+<td><samp>css3-box</samp>
+</td>
+<td>CSS basic box model
+</td>
+<td><i>Candidate</i> Rec.</td>
+<td align="right"><span data-sort-value="000000002020-12-01-0000" style="white-space:nowrap">Dec 2020</span>
+</td></tr>
+<tr>
+<td><samp>css-cascade-3</samp>
+</td>
+<td>CSS Cascading and Inheritance Level 3
+</td>
+<td><i>Recommendation</i></td>
+<td align="right"><span data-sort-value="000000002021-02-01-0000" style="white-space:nowrap">Feb 2021</span>
+</td></tr>
+<tr>
+<td><samp>css3-color</samp>
+</td>
+<td>CSS Color Module Level 3
+</td>
+<td><i>Recommendation</i></td>
+<td align="right"><span data-sort-value="000000002018-06-01-0000" style="white-space:nowrap">Jun 2018</span>
+</td></tr>
+<tr>
+<td><samp>css3-content</samp>
+</td>
+<td>CSS3 Generated and Replaced Content Module
+</td>
+<td>Working <i>Draft</i> 2</td>
+<td align="right"><span data-sort-value="000000002019-08-01-0000" style="white-space:nowrap">Aug 2019</span>
+</td></tr>
+<tr>
+<td><samp>css-fonts-3</samp>
+</td>
+<td>CSS Fonts Module Level 3
+</td>
+<td><i>Recommendation</i></td>
+<td align="right"><span data-sort-value="000000002018-09-01-0000" style="white-space:nowrap">Sep 2018</span>
+</td></tr>
+<tr>
+<td><samp>css3-gcpm</samp>
+</td>
+<td>CSS Generated Content for Paged Media Module
+</td>
+<td>Working <i>Draft</i></td>
+<td align="right"><span data-sort-value="000000002014-05-01-0000" style="white-space:nowrap">May 2014</span>
+</td></tr>
+<tr>
+<td><samp>css3-layout</samp>
+</td>
+<td>CSS Template Layout Module
+</td>
+<td><i>Note</i></td>
+<td align="right"><span data-sort-value="000000002015-03-01-0000" style="white-space:nowrap">Mar 2015</span>
+</td></tr>
+<tr>
+<td><samp>css3-mediaqueries</samp>&nbsp;
+</td>
+<td>Media Queries
+</td>
+<td><i>Recommendation</i></td>
+<td align="right"><span data-sort-value="000000002012-06-01-0000" style="white-space:nowrap">Jun 2012</span>
+</td></tr>
+<tr>
+<td><samp>mediaqueries-4</samp>&nbsp;
+</td>
+<td>Media Queries Level 4
+</td>
+<td><i>Candidate</i> Rec.</td>
+<td align="right"><span data-sort-value="000000002020-07-01-0000" style="white-space:nowrap">Jul 2020</span>
+</td></tr>
+<tr>
+<td><samp>css3-multicol</samp>
+</td>
+<td>Multi-column Layout Module Level 1
+</td>
+<td>Working <i>Draft</i></td>
+<td align="right"><span data-sort-value="000000002021-02-01-0000" style="white-space:nowrap">Feb 2021</span>
+</td></tr>
+<tr>
+<td><samp>css3-page</samp>
+</td>
+<td>CSS Paged Media Module Level 3
+</td>
+<td>Working <i>Draft</i></td>
+<td align="right"><span data-sort-value="000000002018-10-01-0000" style="white-space:nowrap">Oct 2018</span>
+</td></tr>
+<tr>
+<td><samp>selectors-3</samp>
+</td>
+<td>Selectors Level 3
+</td>
+<td><i>Recommendation</i></td>
+<td align="right"><span data-sort-value="000000002018-11-01-0000" style="white-space:nowrap">Nov 2018</span>
+</td></tr>
+<tr>
+<td><samp>selectors-4</samp>
+</td>
+<td>Selectors Level 4
+</td>
+<td>Working <i>Draft</i></td>
+<td align="right"><span data-sort-value="000000002018-11-01-0000" style="white-space:nowrap">Nov 2018</span>
+</td></tr>
+<tr>
+<td><samp>css3-ui</samp>
+</td>
+<td>CSS Basic User Interface Module Level 3 (CSS3 UI)
+</td>
+<td><i>Recommendation</i></td>
+<td align="right"><span data-sort-value="000000002018-06-01-0000" style="white-space:nowrap">Jun 2018</span>
+</td></tr></tbody><tfoot></tfoot></table>
+<h4><span class="mw-headline" id="CSS_4">CSS 4</span></h4>
+<div role="note" class="hatnote navigation-not-searchable">"CSS4" redirects here. For other uses, see CSS4 (disambiguation).</div>
+CSS_Standardization_-The_State_of_the_Web.webm Play media Jen Simmons discussing the state of CSS in 2019, as several CSS4 modules were being advanced
+<p>There is no single, integrated CSS4 specification, because the specification has been split into many separate modules which level independently.
+</p><p>Modules that build on things from CSS Level 2 started at Level 3. Some of them have already reached Level 4 or are already approaching Level 5. Other modules that define entirely new functionality, such as Flexbox, have been designated as Level 1 and some of them are approaching Level 2.
+</p><p>The CSS Working Group sometimes publishes "Snapshots", a collection of whole modules and parts of other drafts that are considered stable enough to be implemented by browser developers. So far, five such "best current practices" documents have been published as Notes, in 2007, 2010, 2015, 2017, and 2018.
+</p><p>Since these specification snapshots are primarily intended for developers, there has been growing demand for as similar versioned reference document targeted at authors, which would present the state of interoperable implementations as meanwhile documented by sites like Can I Use… and the Mozilla Developer Network. A W3C Community Group has been established in early 2020 in order to discuss and define such a resource.The actual kind of versioning is also up to debate, which means that the document once produced might not be called "CSS4".
+</p>
+<h2><span class="mw-headline" id="Advantages">Advantages</span></h2>
+<dl><dt>Separation of content from presentation</dt>
+<dd>Main article: Separation of presentation and content</a></div></dd>
+<dd>CSS facilitates publication of content in multiple presentation formats based on nominal parameters. Nominal parameters include explicit user preferences, different web browsers, the type of device being used to view the content (a desktop computer or mobile device), the geographic location of the user and many other variables.</dd>
+<dt>Site-wide consistency</dt>
+<dd><div role="note" class="hatnote navigation-not-searchable">Main article: Style sheet (web development)</div></dd>
+<dd>When CSS is used effectively, in terms of inheritance and "cascading", a global style sheet can be used to affect and style elements site-wide. If the situation arises that the styling of the elements should be changed or adjusted, these changes can be made by editing rules in the global style sheet. Before CSS, this sort of maintenance was more difficult, expensive and time-consuming.</dd>
+<dt>Bandwidth</dt>
+<dd>A stylesheet, internal or external, specifies the style once for a range of HTML elements selected by <code>class</code>, type or relationship to others. This is much more efficient than repeating style information inline for each occurrence of the element. An external stylesheet is usually stored in the browser cache, and can therefore be used on multiple pages without being reloaded, further reducing data transfer over a network.</dd>
+<dt>Page reformatting</dt>
+<dd><div role="note" class="hatnote navigation-not-searchable">Main article: Progressive enhancement</div></dd>
+<dd>With a simple change of one line, a different style sheet can be used for the same page. This has advantages for accessibility, as well as providing the ability to tailor a page or site to different target devices. Furthermore, devices not able to understand the styling still display the content.</dd>
+<dt>Accessibility</dt>
+<dd>Without CSS, web designers must typically lay out their pages with techniques such as HTML tables that hinder accessibility for vision-impaired users (see Tableless web design#Accessibility).</dd></dl>
+<h2><span class="mw-headline" id="Standardization">Standardization</span></h2>
+<h3><span class="mw-headline" id="Frameworks">Frameworks</span></h3>
+Main article: CSS framework
+<p>CSS frameworks are pre-prepared libraries that are meant to allow for easier, more standards-compliant styling of web pages using the Cascading Style Sheets language. CSS frameworks include Blueprint Bootstrap, Foundation and Materialize. Like programming and scripting language libraries, CSS frameworks are usually incorporated as external .css sheets referenced in the HTML head. They provide a number of ready-made options for designing and laying out the web page. Although many of these frameworks have been published, some authors use them mostly for rapid prototyping, or for learning from, and prefer to 'handcraft' CSS that is appropriate to each published site without the design, maintenance and download overhead of having many unused features in the site's styling.
+</p>
+
+</body>
+
+</html>
